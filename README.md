@@ -15,7 +15,3 @@ Libraries - install from requirements.txt using:
 
 ```pip3 install -r requirements```
 
---
-
-
-
