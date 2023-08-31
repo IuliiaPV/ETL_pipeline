@@ -19,11 +19,8 @@ Libraries - listed in [requirements.txt](./requirements.txt)
 
 ### Instructions
 
-1. Install the libraries you need from [requirements.txt](./requirements.txt) using:
-
-```
-pip3 install -r requirements
-```
+1. Install the libraries you need from [requirements.txt](./requirements.txt) using ``` 
+pip3 install -r requirements ```
 2. Copy [.env.example](./.env.example) `.env` and fill the environment variables.
 3. Run [main.py](./main.py) that performs the above-mentioned extraction, transformation and load tasks
 

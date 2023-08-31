@@ -4,11 +4,11 @@ from src.extract import extract_transactional_data
 from src.transform import identify_and_drop_duplicates
 from src.load_data_to_s3 import df_to_s3
 
-# you need this library to read the password
+# the library to read the password
 from dotenv import load_dotenv
 load_dotenv()
 
-# import variables from .env file
+# importing variables from .env file
 dbname = os.getenv('dbname')
 host = os.getenv('host')
 port = os.getenv('port')
