@@ -12,15 +12,26 @@ Building an ETL pipeline that runs the following steps:
 - finding and dropping duplicates in the data
 - loading the data to s3 bucket
 
-### Requirements 
-Python - 3.11 version was used
+### Requirements
+  The minimum requirements:
+- Docker for Mac: [Docker >= 20.10.2](https://docs.docker.com/docker-for-mac/install/)
+- Docker for Windows: 
+  - Installation: [Docker](https://docs.docker.com/desktop/install/windows-install/)
+  - Manual installation steps for older WSL version: [Docker WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
 
-Libraries - listed in [requirements.txt](./requirements.txt)
+### Instructions on how to execute the code
+- Copy the `.env.example` file to `.env` and fill out the environment vars.
 
-### Instructions
+- Make sure you are executing the code from the etl_pipeline folder and you have Docker Desktop running.
 
-1. Install the libraries you need from [requirements.txt](./requirements.txt) using ``` 
-pip3 install -r requirements ```
-2. Copy [.env.example](./.env.example) `.env` and fill the environment variables.
-3. Run [main.py](./main.py) that performs the above-mentioned extraction, transformation and load tasks
 
+To run it locally first build the image.
+
+```bash
+  docker image build -t etl .
+```
+
+Then run the etl job using docker:
+```bash
+  docker run --env-file .env etl
+```

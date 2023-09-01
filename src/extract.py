@@ -54,6 +54,7 @@ def extract_transactional_data(dbname, host, port, user, password):
                 ot.stock_code,
                 ot.quantity, 
                 ot.price, 
+                ot.quantity * ot.price as total_order_value,
                 ot.customer_id,
                 ot.country,
                /*this code to replace the missing values in description with unknown*/
