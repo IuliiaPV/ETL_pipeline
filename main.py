@@ -5,8 +5,8 @@ from src.transform import identify_and_drop_duplicates
 from src.load_data_to_s3 import df_to_s3
 
 # the library to read the password. don't use it with docker
-#from dotenv import load_dotenv
-#load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # importing variables from .env file
 dbname = os.getenv('dbname')
