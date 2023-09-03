@@ -5,6 +5,7 @@ from src.transform import identify_and_drop_duplicates
 
 
 class TestIdentifyAndDropDuplicates(unittest.TestCase):
+
     def test_identify_and_drop_duplicates(self):
         """
         Test that the definition removes duplicates
